@@ -15,7 +15,7 @@ footer {
 }
 
 img {
-    border-radius: 20%;
+    border-radius: 10%;
     height: 200px;
     box-shadow: 0 10px 20px rgba(24,24,28,.89);
 }
@@ -27,19 +27,45 @@ nav {
     padding: 16px;
 }
 
+.nav-grid {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    color:#25D9A6
+}
+
+.align-right {
+    text-align: right;
+}
+
 .taco-grid {
     display: grid;
-    grid-template-columns: repeat(4, 200fr);
-    grid-template-rows: 25%;
-    place-items: center;
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: auto;
+    gap: 20fr;
+    padding: 20fr;
+    margin: 20fr;
+}
+
+.recipe-image {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    object-position: 0%;
 }
 
 a {
     text-decoration: none;
     color: #F26B1D;
+    font-size: larger;
+}
+
+p {
+    margin: 3px;
+    font-size: 16px;
 }
 
 #main-page {
+    font-size: 16px;
     color: white;
 }
 
@@ -63,9 +89,4 @@ a {
 
 h1 {
     color: #F26B1D
-}
-python
-
-.food-pic {
-
 }
