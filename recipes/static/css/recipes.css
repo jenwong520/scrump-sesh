@@ -1,0 +1,71 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+main {
+    /* min-height: 85vh; */
+    padding: 16px;
+}
+
+footer {
+    padding: 30px 24px;
+    background-color: #25D9A6;
+    font-size: 16px;
+}
+
+img {
+    border-radius: 20%;
+    height: 200px;
+    box-shadow: 0 10px 20px rgba(24,24,28,.89);
+}
+
+nav {
+    background-color: #F21B7F;
+    box-shadow: 0 10px 20px rgba(24,24,28,.89);
+    border-bottom: 1px black solid;
+    padding: 16px;
+}
+
+.taco-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 200fr);
+    grid-template-rows: 25%;
+    place-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: #F26B1D;
+}
+
+#main-page {
+    color: white;
+}
+
+#ratings {
+    padding-top: 2%;
+    margin-left: 20%;
+    text-align: left;
+}
+
+.item {
+    text-align: center;
+}
+
+#rows {
+
+}
+
+.striped_rows tr:nth-child(even) {
+    background-color: lightgrey;
+}
+
+h1 {
+    color: #F26B1D
+}
+python
+
+.food-pic {
+
+}
