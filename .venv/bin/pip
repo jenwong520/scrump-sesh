@@ -1,4 +1,4 @@
-#!/Users/jenniferwong/hack-reactor/projects/scrumptious/.venv/bin/python
+#!/Users/jenniferwong/hack-reactor/projects/scrump-sesh.venv/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys
