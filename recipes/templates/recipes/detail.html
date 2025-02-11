@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ recipe_object.title }}
+{% endblock title %}
+
+{% block content %}
+<header>
+    <nav class="nav-grid">
+        <a id="main-page" href="{% url 'recipe_list' %}">Main page</a>
+    </nav>
+</header>
+<main>
+    <h1>{{ recipe_object.title }}</h1>
+
+    <img src="{{ recipe_object.picture }}" alt="taco plate">
+    <div>4.3 stars</div>
+    <div>
+        <a href="{% url 'edit_recipe' recipe_object.id %}">Edit recipe</a>
+    </div>
+
+        <p>{{ recipe_object.description }}</p>
+    <h2>Ingredients</h2>
+    <table class="striped_rows">
+        <thead>
+            <tr>
+                <th>Amount</th>
+                <th>Food item</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for ingredient in recipe_object.ingredients.all %}
+                <tr>
+                    <td>{{ ingredient.amount }}</td>
+                    <td>{{ ingredient.food_item }}</td>
+                </tr>
+            {% endfor %}
+            <!-- <tr>
+                <td>1 cup</td>
+                <td>Green beans</td>
+            </tr>
+            <tr>
+                <td>3 ears</td>
+                <td>Fresh corn</td>
+            </tr>
+            <tr>
+                <td>2 cups</td>
+                <td>Tomatillo salsa</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>Corn tortillas</td>
+            </tr>
+            <tr>
+                <td>0.5 cups</td>
+                <td>Cotija cheese</td>
+            </tr> -->
+        </tbody>
+    </table>
+    <h2>Steps</h2>
+    <ol>
+        {% for step in recipe_object.steps.all %}
+        <li>{{ step.instruction }}</li>
+        {% endfor %}
+        <!-- <li>Blanch the green beans</li>
+        <li>Grill the green beans and the ears of corn</li>
+        <li>Chop the green beans</li>
+        <li>Slice the corn off the cob</li>
+        <li>Grill the tortillas</li>
+        <li>Assemble the tacos with veggies, salsa, and cheese</li> -->
+    </ol>
+</main>
+{% endblock content %}

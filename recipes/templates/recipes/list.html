@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Scrumptious Recipes
+{% endblock title %}
+
+{% block content %}
+<header>
+    <nav class="nav-grid">
+        <a id="main-page" href="{% url 'recipe_list' %}">Main page</a>
+
+
+        {% if user.is_authenticated %}
+        <a id="main-page" href="{% url 'create_recipe' %}">Create a recipe</a>
+            Hello, {{ user.username }}!
+            <a id="main-page" class="align-right" href="{% url 'user_logout' %}">Logout</a>
+        {% else %}
+            <a id="main-page" class="align-right" href="{% url 'signup' %}">Sign up</a>
+            <a id="main-page" class="align-right" href="{% url 'user_login' %}">Login</a>
+        {% endif %}
+    </nav>
+</header>
+<main>
+    <h1>Scrumptious Recipes</h1>
+    <h2>All the food that's fit to eat</h2>
+    <div class="taco-grid item">
+        {% for recipe in recipe_list %}
+    <div class="image-container">
+        <h3>
+            <a href="{% url 'show_recipe' recipe.id %}">{{ recipe.title }}</a>
+            <p>{{ recipe.created_on|date:"F Y" }}</p>
+        </h3>
+        <img src="{{ recipe.picture }}" alt="tacos" class="recipe-image">
+        <div id="ratings">4.3 stars</div>
+    </div>
+    {% endfor %}
+    </div>
+</main>
+{% endblock content %}

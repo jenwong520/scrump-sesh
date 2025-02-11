@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Create Recipe
+{% endblock title %}
+
+{% block content %}
+</head>
+<body>
+    <header>
+        <nav>
+            <a id="main-page" href="{% url 'recipe_list' %}">Main page</a>
+        </nav>
+    </header>
+    <main>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button>Create</button>
+        </form>
+    </main>
+{% endblock content %}
