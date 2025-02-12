@@ -1,4 +1,4 @@
-# Scrump(sesh)
+# Grand Master Chef
 
 ## Description
 Designed for serious home cooks and profesional chefs who want to improve their culinary skills, this app allows users to track and document their cooking sessions.

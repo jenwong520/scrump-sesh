@@ -1,5 +1,5 @@
 """
-URL configuration for scrump-sesh project.
+URL configuration for grandmasterchef project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/5.0/topics/http/urls/
@@ -27,4 +27,6 @@ urlpatterns = [
     path("recipes/", include("recipes.urls")),
     path("", redirect_to_recipe_list, name="home_page"),
     path("accounts/", include("accounts.urls")),
+
+    path("__reload__/", include("django_browser_reload.urls")),
 ]

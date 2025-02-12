@@ -38,7 +38,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="/Users/jenniferwong/hack-reactor/projects/scrump-sesh/.venv"
+VIRTUAL_ENV="/Users/jenniferwong/hack-reactor/projects/grandmasterchef/.venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

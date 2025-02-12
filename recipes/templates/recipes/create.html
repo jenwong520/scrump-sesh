@@ -9,14 +9,14 @@
 <body>
     <header>
         <nav>
-            <a id="main-page" href="{% url 'recipe_list' %}">Main page</a>
+            <a id="main-page" href="{% url 'recipe_list' %}">Home</a>
         </nav>
     </header>
     <main>
-        <form method="post">
+        <form method="post" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
             {% csrf_token %}
             {{ form.as_p }}
-            <button>Create</button>
+            <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Create</button>
         </form>
     </main>
 {% endblock content %}

@@ -1,4 +1,4 @@
-{% load static %}
+{% load static tailwind_tags %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -6,14 +6,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
      <title>{% block title %}{% endblock title %}</title>
-     <link rel="stylesheet" href="{% static "css/recipes.css" %}">
+     {% tailwind_css %}
+     <!-- <link rel="stylesheet" href="{% static "css/recipes.css" %}"> -->
+
 </head>
 <body>
     {% block content %}{% endblock content %}
     <footer>
-        <div>Made with love by Scrump(sesh)</div>
-        <div>Copyright by me</div>
+        <div>Made with love by grand master chef</div>
     </footer>
 </body>
 </html>
